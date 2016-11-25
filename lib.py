@@ -11,7 +11,7 @@ def getMemberId (mobile):
     )
     sql='SELECT member_id FROM member_info WHERE mobile='+mobile
     cursor = connection.cursor()
-    cursor.execute(sql)
+    cursor.execute(str(sql))
     restult = cursor.fetchone()
     return str(restult['member_id'])
     connection.close()
