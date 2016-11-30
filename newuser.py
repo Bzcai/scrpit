@@ -4,8 +4,10 @@
 import requests
 import sys
 
-
-mobile = sys.argv[1]
+if sys.argv[1] is None:
+    mobile = 13800138000
+else:
+    mobile = sys.argv[1]
 #print(mobile)
 url = 'http://api.uat.chunbo.com:90/Sms/setVerifyApi/mobile/'+mobile+'/verify/1234'
 #print(url)
